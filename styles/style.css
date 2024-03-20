@@ -1,0 +1,92 @@
+body{
+	font-size: 100%;
+	font-family: "Lato", sans-serif;
+}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	font-size: 100%;
+	font-family: "Lato", sans-serif;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+button, .button-primary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin: 0;
+	padding: 6px 20px;
+	min-height: 36px;
+	font: 500 17px/17px "Lato", Helvetica, Arial, Tahoma, sans-serif;
+	text-align: center;
+	color: var(--var-button-color);
+	background: var(--var-button-bg);
+	box-shadow: var(--var-button-shadow);
+	border: 0 none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font: 500 18px/18px "Chakra Petch", sans-serif;
+}
+.button-primary {
+	color: var(--var-button-primary-color) !important;
+	background: var(--var-button-primary-bg) !important;
+	box-shadow: var(--var-button-primary-shadow) !important;
+}
+
+/* Table */
+.zebra table, .zebra, .zebra_grid, .grid-view table {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.zebra_grid {
+	box-shadow: var(--var-table-shadow);
+}
+.tab {
+	display: table;
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+}
+.zebra_grid > :nth-child(1) {
+	background-color: transparent !important;
+	color: var(--var-table-header-title-color);
+	transition: all 0.3s ease;
+}
+.tab_row {
+	display: table-row;
+}
+.zebra table tr th:first-child, .zebra tr th:first-child, .grid-view .items thead tr:nth-child(1) th:first-child, .zebra_grid > .tab_row:nth-child(1) > .tab_cell:first-child {
+	border-top-left-radius: 10px;
+}
+.zebra_grid.bordered_cells .tab_cell {
+	border-right: 1px solid var(--var-table-border-color);
+}
+.zebra_grid > *:nth-child(1) .tab_cell {
+	background-color: var(--var-table-bg-header-color);
+	color: var(--var-table-header-title-color);
+}
+.zebra.doublepadd tr td, .tab.doublepadd .tab_cell, .tab.doublepadd .tab_cell_la {
+	padding: 10px 10px;
+	line-height: 1;
+}
+table tr th label, .tab:not(.zebra_headless) .tab_row:nth-child(1) .tab_cell label {
+	text-align: left;
+	line-height: 1em;
+}
+label, div.form label {
+	display: inline-block;
+	padding: 0;
+	font-size: 18px;
+	font-family: "Chakra Petch", sans-serif;
+	line-height: 36px;
+	text-align: left;
+	color: inherit;
+}

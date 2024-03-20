@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" SB_content="width=device-width, initial-scale=1.0">
+	<title>btn-secondary - JOT Storybook</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&amp;family=Lato:wght@100;400;700&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/jot-storybook/styles/style.css">
+	<link rel="stylesheet" href="/jot-storybook/styles/common.css">
+	<link rel="stylesheet" href="/jot-storybook/styles/vars.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: var(--var-bg-main);
+		}
+		.SB_content-wrapper{
+			min-height: 100vh !important;
+			display: flex !important;
+			flex-direction: row !important;
+			padding: 2px !important;
+		}
+		.SB_content-wrapper .SB_clearfix{
+			width: 300px !important;
+			height: 100% !important;
+		}
+		.SB_content-wrapper .SB_content {
+			flex: 1 !important;
+		}
+		.SB_sidebar{
+			min-height: 100vh !important;
+			width: 300px !important;
+			
+			background-color: var(--var-bg-lay-over) !important;
+			box-shadow: var(--var-shadow-middle) !important;
+			position: fixed !important;
+			top: 2px !important;
+			left: 2px !important;
+			padding: 20px !important;
+		}
+		ul.SB_side_menu, ul.SB_side_menu ul {
+			cursor: pointer !important;
+			position: relative !important;
+			margin: 0 !important;
+			padding-left: 0 !important;
+			list-style-type: none !important;
+			/* padding: 10px; */
+		}
+		ul.SB_side_menu, ul.SB_side_menu li{
+			display: block !important;
+			padding:  10px 10px 0 10px !important;
+		}
+		ul.SB_side_menu > *{
+			/* margin-left: 10px; */
+			position: relative !important;
+		}
+		ul.SB_side_menu ul::before{
+			content: '' !important;
+			display: block !important;
+			position: absolute !important;
+			width: 8px !important;
+			height: 2px !important;
+			background-color: black !important;
+			left: -10px !important;
+			top: 9px !important;
+		}
+		.SB_sidebar .SB_scroll-wrapper .hidden-ul > li {
+			display: none !important;
+		}
+		.SB_content{
+			padding: 20px 40px !important;
+		}
+		.SB_content h1{
+			margin-bottom: 40px !important;
+		}
+		.SB_content .SB_element-wrapper{
+			margin: 20px 0 !important;
+			padding: 5px 0 !important;
+		}
+		ul.SB_side_menu li > a, ul.SB_side_menu ul li > a{
+			color: #0C8DEA !important;
+		}
+		ul.SB_side_menu li p{
+			margin: 0 !important;
+		}
+		pre.SB_code {
+			background-color: #2C2F33 !important;
+			padding: 5px !important;
+			color: white !important;
+			border-radius: 5px !important;
+			tab-size: 4 !important;
+			font-family: monospace !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="SB_sidebar">
+		<div class="SB_scroll-wrapper">
+			<ul class="SB_side_menu">
+				<li>
+					<ul class="hidden-ul inner-ul">
+						<p class="menu-title">buttons</p>
+						<li>
+							<ul class="hidden-ul inner-ul">
+								<p class="menu-title">btn-primary</p>
+								<li>
+									<a href="/jot-storybook/out/design/buttons/btn-primary/btn-primary-hover.html">btn-primary-hover.html</a>
+								</li>
+								<li>
+									<a href="/jot-storybook/out/design/buttons/btn-primary/btn-primary-standard.html">btn-primary-standard.html</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="/jot-storybook/out/design/buttons/btn-secondary.html">btn-secondary.html</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="hidden-ul inner-ul">
+						<p class="menu-title">tables</p>
+						<li>
+							<a href="/jot-storybook/out/design/tables/table-zebra-doublepadd.html">table-zebra-doublepadd.html</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/jot-storybook/out/design/test.html">test.html</a>
+				</li>
+</ul>
+		</div>
+	</div>
+	<div class="SB_content-wrapper">
+		<div class="SB_clearfix"></div>
+		<div class="SB_content">
+			<h1> buttons / btn-secondary</h1>
+			<div class="SB_element-wrapper">
+				btn secondary content
+			</div>
+			<h2>Code</h2>
+			<pre class="SB_code">
+btn secondary content
+			</pre>
+		</div>
+	</div>
+	<script>
+		const file_path = '/buttons/btn-secondary.html';
+		window.onload = function(){
+			let ul_elements = document.querySelectorAll('ul.inner-ul');
+			ul_elements.forEach(element => {
+				element.querySelector('p.menu-title').onclick = () => {
+					element.classList.toggle('hidden-ul');
+				}	
+			});
+		}
+	</script>
+</body>
+</html>
